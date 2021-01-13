@@ -1,7 +1,4 @@
-const AccessControl = require('accesscontrol');
-const ac = new AccessControl();
-
-let grants = [
+export const grants = [
     //admin posts
     {
         role: 'admin',
