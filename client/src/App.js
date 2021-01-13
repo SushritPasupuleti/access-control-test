@@ -36,7 +36,7 @@ function App() {
         <form className={classes.root} noValidate autoComplete="off">
           <Input placeholder="Unprotected Name" inputProps={{ 'aria-label': 'description' }} />
           <Input placeholder="Unprotected Age" inputProps={{ 'aria-label': 'description' }} />
-          <Input multiline placeholder="Protected Id lvl admin" disabled={
+          <Input multiline placeholder="Protected Id lvl user" disabled={
             ac.can(userState.user.role).createOwn('posts').granted === true ? false : true
           } inputProps={{ 'aria-label': 'description' }} />
         </form>
