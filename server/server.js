@@ -24,7 +24,14 @@ app.get('/', (req, res) => {
 })
 
 app.post('/hello-there', (req, res) => {
-  res.send('General Kenobi!')
+  //check if user has any role
+
+  if (req.body.user !== undefined && req.body.user.role !== undefined){
+    res.send('General Kenobi!')
+  }
+  else {
+    res.send('I was expecting Kenobi, why are you here ?')
+  }
 })
 
 app.listen(port, () => {
