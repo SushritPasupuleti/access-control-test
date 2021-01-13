@@ -43,22 +43,22 @@ const grants = [
     },
     //user post
     {
-        role: 'users',
+        role: 'user',
         resource: 'posts',
         action: 'create:own',
     },
     {
-        role: 'users',
+        role: 'user',
         resource: 'posts',
         action: 'read:any',
     },
     {
-        role: 'users',
+        role: 'user',
         resource: 'posts',
         action: 'update:own',
     },
     {
-        role: 'users',
+        role: 'user',
         resource: 'posts',
         action: 'delete:own',
     },

@@ -34,6 +34,28 @@ app.post('/hello-there', (req, res) => {
   }
 })
 
+app.post('/create', (req, res) => {
+  //check if user has any role
+
+  
+  if (req.body.user !== undefined && req.body.user.role !== undefined){
+    const permission = ac.can(req.body.user.role).createOwn('posts');
+    
+    if (permission.granted) {
+      res.send('Ah the negotiator!')
+    }
+
+    else {
+      res.send('Kill him')
+    }
+    
+  }
+  else {
+    res.send('I was expecting Kenobi, why are you here ?')
+  }
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
