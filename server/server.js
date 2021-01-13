@@ -2,7 +2,7 @@ require('dotenv').config();
 const cors = require('cors');
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 5000
 const AccessControl = require('accesscontrol');
 const { Grants } = require('./config/access.js');
 var bodyParser = require('body-parser')
@@ -21,6 +21,10 @@ app.use(function (req, res, next) {
 
 app.get('/', (req, res) => {
   res.send('Hello There!')
+})
+
+app.post('/hello-there', (req, res) => {
+  res.send('General Kenobi!')
 })
 
 app.listen(port, () => {
