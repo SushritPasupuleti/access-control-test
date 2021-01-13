@@ -1,4 +1,4 @@
-export const grants = [
+const grants = [
     //admin posts
     {
         role: 'admin',
@@ -63,3 +63,5 @@ export const grants = [
         action: 'delete:own',
     },
 ]
+
+module.exports.Grants = grants;
