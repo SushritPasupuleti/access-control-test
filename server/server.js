@@ -36,7 +36,7 @@ app.post('/hello-there', (req, res) => {
 
 app.post('/create', (req, res) => {
   //check if user has any role
-
+  //console.table(ac)
   
   if (req.body.user !== undefined && req.body.user.role !== undefined){
     const permission = ac.can(req.body.user.role).createOwn('posts');
